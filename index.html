@@ -606,18 +606,18 @@
   "use strict";
 
   /* ============ 1. IMAGE SLOTS ============
-     Paste base64 strings (no need to include the "data:image/jpeg;base64," prefix,
+     Paste base64 strings (no need to include the "data:image/jpg;base64," prefix,
      it is added automatically) to swap in the real photo/logos.
-     - profile.jpg      -> profile_B64.jpeg.jpg
-     - dajubhai logo     -> DAJUBHAI_B64.JPEG
-     - pharmamandu logo  -> PHARMAMANDU_B64.JPEG
-     - civil logo        -> CIVIL_B64.JPEG
+     - profile.jpg      -> profile_B64.jpg
+     - dajubhai logo     -> DAJUBHAI_B64.JPG
+     - pharmamandu logo  -> PHARMAMANDU_B64.JPG
+     - civil logo        -> CIVIL_B64.JPG
   =========================================== */
   const IMAGES = {
-    profile: "",      // <-- paste profile_B64.jpeg.jpg base64 here
-    dajubhai: "",      // <-- paste DAJUBHAI_B64.JPEG base64 here
-    pharmamandu: "",   // <-- paste PHARMAMANDU_B64.JPEG base64 here
-    civil: ""          // <-- paste CIVIL_B64.JPEG base64 here
+    profile: "",      // <-- paste profile_B64.jpg.jpg base64 here
+    dajubhai: "",      // <-- paste DAJUBHAI_B64.jpg base64 here
+    pharmamandu: "",   // <-- paste PHARMAMANDU_B64.jpg base64 here
+    civil: ""          // <-- paste CIVIL_B64.jpg base64 here
   };
 
   function applyImage(base64, imgId, fallbackId){
@@ -625,7 +625,7 @@
     const img = document.getElementById(imgId);
     const fb = document.getElementById(fallbackId);
     if(!img) return;
-    img.src = base64.startsWith("data:") ? base64 : "data:image/jpeg;base64," + base64;
+    img.src = base64.startsWith("data:") ? base64 : "data:image/jpg;base64," + base64;
     img.style.display = "block";
     if(fb) fb.style.display = "none";
   }
