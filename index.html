@@ -3,706 +3,533 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bijaya Bhandari — Registered Pharmacist &amp; Digital Health Entrepreneur</title>
-<meta name="description" content="Bijaya Bhandari — Registered Pharmacist and digital health entrepreneur in Kathmandu, Nepal. Founder of Daju Bhai Pharmacy, Pharmamandu Dot Com, Civil Medicare Centre, and Unigrow Medisales.">
+<title>Bijaya Bhandari | Pharmacist &amp; Healthcare Entrepreneur</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --pine:#0F3D3E;
-    --pine-deep:#0A2C2D;
-    --paper:#F1F4EF;
-    --paper-alt:#E6ECE3;
-    --card:#FBFBF8;
-    --saffron:#E8A33D;
-    --saffron-deep:#C7811E;
-    --maroon:#7C2434;
-    --ink:#142420;
-    --ink-soft:#4B5D57;
-    --line:#D6DED2;
-    --radius:18px;
-    --shadow: 0 12px 30px -14px rgba(15,61,62,0.28);
+    --teal-950:#0B2E2F;
+    --teal-800:#12403F;
+    --teal-600:#1D5C58;
+    --teal-100:#DCEAE7;
+    --amber-500:#C17817;
+    --amber-300:#E3A857;
+    --amber-050:#FBF0DF;
+    --bg:#F4F7F5;
+    --ink:#14282A;
+    --ink-soft:#4C6260;
+    --card:#FFFFFF;
+    --line:#D8E2DF;
+    --font-display:'Source Serif 4', serif;
+    --font-body:'IBM Plex Sans', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
+  *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
-  }
   body{
-    background:var(--paper);
+    margin:0;
+    background:var(--bg);
     color:var(--ink);
-    font-family:'IBM Plex Sans', sans-serif;
+    font-family:var(--font-body);
     line-height:1.6;
-    -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3,.display{
-    font-family:'Fraunces', serif;
-    letter-spacing:-0.01em;
-    color:var(--pine-deep);
-  }
-  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.02em;}
-  a{color:inherit; text-decoration:none;}
-  img{max-width:100%; display:block;}
-  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
-  section{padding:96px 0;}
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--maroon);
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:14px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:22px; height:1px;
-    background:var(--maroon);
-    display:inline-block;
-  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
 
-  /* ---------- NAV ---------- */
-  header.nav{
-    position:fixed; top:0; left:0; right:0; z-index:100;
-    background:rgba(241,244,239,0.86);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
+  /* -------- Top bar -------- */
+  header.topbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--teal-950);
+    color:#fff;
+    border-bottom:1px solid rgba(255,255,255,0.08);
   }
-  .nav-inner{
-    max-width:1120px; margin:0 auto; padding:14px 28px;
-    display:flex; align-items:center; justify-content:space-between;
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 28px;max-width:1080px;margin:0 auto;
   }
   .brand{
-    display:flex; align-items:center; gap:10px;
-    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
-    color:var(--pine-deep);
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--font-display);font-weight:600;font-size:19px;
+    letter-spacing:0.2px;
   }
-  .brand .badge{
-    width:34px; height:34px; border-radius:50%;
-    background:var(--pine); color:var(--paper);
-    display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace; font-size:0.75rem; font-weight:600;
+  .brand .rx{
+    font-family:var(--font-mono);
+    color:var(--amber-300);
+    font-size:20px;
   }
-  nav.links{display:flex; gap:28px; align-items:center;}
-  nav.links a{
-    font-size:0.88rem; font-weight:500; color:var(--ink-soft);
-    position:relative; padding:4px 0;
+  nav.toplinks{display:flex;gap:26px;font-size:14px;}
+  nav.toplinks a{text-decoration:none;color:#CFE3E0;transition:color .2s;}
+  nav.toplinks a:hover,nav.toplinks a:focus-visible{color:#fff;}
+  .call-btn{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--teal-950);
+    background:var(--amber-300);
+    padding:8px 14px;
+    border-radius:4px;
+    text-decoration:none;
+    white-space:nowrap;
   }
-  nav.links a::after{
-    content:""; position:absolute; left:0; bottom:-2px; height:2px; width:0;
-    background:var(--saffron-deep); transition:width .25s ease;
-  }
-  nav.links a.active, nav.links a:hover{color:var(--pine-deep);}
-  nav.links a.active::after, nav.links a:hover::after{width:100%;}
-  .nav-cta{
-    background:var(--pine); color:var(--paper);
-    padding:9px 16px; border-radius:999px; font-size:0.82rem; font-weight:600;
-    border:1px solid var(--pine);
-  }
-  .nav-cta:hover{background:var(--pine-deep);}
-  .menu-btn{display:none; background:none; border:none; cursor:pointer; padding:6px;}
-  .menu-btn span{display:block; width:22px; height:2px; background:var(--pine-deep); margin:5px 0; transition:.25s;}
+  .call-btn:hover{background:var(--amber-500);color:#fff;}
+  .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:22px;cursor:pointer;}
 
-  @media (max-width:860px){
-    nav.links{
-      position:fixed; top:64px; left:0; right:0;
-      background:var(--card);
-      flex-direction:column; align-items:flex-start;
-      padding:18px 28px 26px; gap:16px;
-      border-bottom:1px solid var(--line);
-      transform:translateY(-12px); opacity:0; pointer-events:none;
-      transition:.25s ease;
-    }
-    nav.links.open{transform:translateY(0); opacity:1; pointer-events:auto;}
-    .menu-btn{display:block;}
-    .nav-cta{display:none;}
+  /* -------- Hero: prescription pad -------- */
+  section.hero{padding:64px 0 40px;}
+  .pad{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    overflow:hidden;
   }
-
-  /* ---------- HERO ---------- */
-  .hero{padding:168px 0 80px;}
-  .hero-grid{
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
-  }
-  .hero h1{font-size:clamp(2.4rem, 5vw, 3.6rem); font-weight:600; line-height:1.04;}
-  .hero .role{
-    margin-top:14px; font-size:1.12rem; color:var(--ink-soft); max-width:46ch;
-  }
-  .hero .role strong{color:var(--pine-deep); font-weight:600;}
-  .addr{
-    margin-top:22px; display:flex; align-items:center; gap:8px;
-    font-family:'IBM Plex Mono', monospace; font-size:0.86rem; color:var(--ink-soft);
-  }
-  .contact-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px;}
-  .pill-btn{
-    display:inline-flex; align-items:center; gap:8px;
-    padding:10px 16px; border-radius:999px; font-size:0.85rem; font-weight:600;
-    border:1px solid var(--pine); color:var(--pine-deep); background:transparent;
-    transition:.2s;
-  }
-  .pill-btn:hover{background:var(--pine); color:var(--paper);}
-  .pill-btn.filled{background:var(--saffron); border-color:var(--saffron); color:var(--pine-deep);}
-  .pill-btn.filled:hover{background:var(--saffron-deep); border-color:var(--saffron-deep);}
-  .social-row{display:flex; gap:12px; margin-top:16px;}
-  .social-row a{
-    width:38px; height:38px; border-radius:50%; border:1px solid var(--line);
-    display:flex; align-items:center; justify-content:center; color:var(--pine-deep);
-    transition:.2s;
-  }
-  .social-row a:hover{border-color:var(--pine); background:var(--pine); color:var(--paper);}
-
-  .rx-frame{
-    position:relative; background:var(--card); border:1px solid var(--line);
-    border-radius:var(--radius); padding:22px; box-shadow:var(--shadow);
-  }
-  .rx-frame .rx-top{
-    display:flex; justify-content:space-between; align-items:center;
-    font-family:'IBM Plex Mono', monospace; font-size:0.7rem; color:var(--ink-soft);
-    letter-spacing:0.08em; text-transform:uppercase; margin-bottom:14px;
-  }
-  .photo-holder{
-    width:100%; aspect-ratio:1/1; border-radius:14px; overflow:hidden;
-    background:linear-gradient(150deg, var(--pine), var(--pine-deep));
-    display:flex; align-items:center; justify-content:center;
+  .pad::before{content:"";}
+  .pad-left{
+    padding:44px 44px 40px;
     position:relative;
   }
-  .photo-holder img{width:100%; height:100%; object-fit:cover;}
-  .monogram-fallback{
-    font-family:'Fraunces', serif; font-weight:600; font-size:4.2rem; color:var(--saffron);
+  .pad-left::after{
+    content:"";
+    position:absolute;right:0;top:24px;bottom:24px;
+    width:1px;
+    background-image:linear-gradient(var(--line) 60%, transparent 0%);
+    background-size:1px 10px;
+    background-repeat:repeat-y;
   }
-  .rx-frame .rx-bottom{
-    display:flex; justify-content:space-between; margin-top:16px;
-    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--ink-soft);
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--amber-500);
+    display:flex;align-items:center;gap:8px;
+    margin-bottom:18px;
+  }
+  .eyebrow .rx-mark{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:24px;height:24px;border-radius:50%;
+    border:1.5px solid var(--amber-500);
+    font-family:var(--font-mono);font-size:13px;font-weight:500;
+  }
+  h1.name{
+    font-family:var(--font-display);
+    font-size:clamp(34px,5vw,50px);
+    font-weight:600;
+    margin:0 0 10px;
+    color:var(--teal-950);
+    line-height:1.08;
+  }
+  p.role{
+    font-size:16.5px;
+    color:var(--ink-soft);
+    max-width:480px;
+    margin:0 0 28px;
+  }
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    font-family:var(--font-body);
+    font-size:14px;font-weight:500;
+    padding:11px 20px;
+    border-radius:4px;
+    text-decoration:none;
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid transparent;
+    transition:transform .15s ease, background .2s ease;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-primary{background:var(--teal-800);color:#fff;}
+  .btn-primary:hover{background:var(--teal-950);}
+  .btn-outline{border-color:var(--teal-600);color:var(--teal-800);}
+  .btn-outline:hover{background:var(--teal-100);}
+
+  .pad-right{
+    background:var(--teal-950);
+    display:flex;align-items:center;justify-content:center;
+    padding:36px;
+    position:relative;
+  }
+  .capsule-frame{
+    width:190px;height:190px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid var(--amber-300);
+    background:var(--teal-800);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .capsule-frame img{width:100%;height:100%;object-fit:cover;}
+  .avatar-fallback{
+    font-family:var(--font-display);
+    font-size:52px;font-weight:600;color:var(--amber-300);
+  }
+  .pad-right .label-tape{
+    position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+    font-family:var(--font-mono);font-size:11.5px;letter-spacing:1px;
+    color:#9FC1BE;text-transform:uppercase;
   }
 
-  /* pulse divider */
-  .pulse-divider{width:100%; height:44px; opacity:0.55; margin-top:64px;}
-  .pulse-divider path{
-    stroke:var(--maroon); stroke-width:1.5; fill:none;
-    stroke-dasharray:600; stroke-dashoffset:600;
+  /* -------- Section shell -------- */
+  section{padding:56px 0;}
+  .section-head{margin-bottom:32px;}
+  .kicker{
+    font-family:var(--font-mono);
+    font-size:12px;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--amber-500);margin:0 0 8px;
   }
-  .pulse-divider.in-view path{
-    animation:draw 1.6s ease forwards;
+  h2.title{
+    font-family:var(--font-display);
+    font-size:28px;font-weight:600;
+    color:var(--teal-950);margin:0;
   }
-  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  p.lede{color:var(--ink-soft);max-width:640px;margin:12px 0 0;font-size:15.5px;}
 
-  /* ---------- REVEAL ---------- */
-  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in-view{opacity:1; transform:translateY(0);}
-
-  /* ---------- ABOUT ---------- */
-  .about-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:56px;}
-  .about-grid h2{font-size:2rem; margin-bottom:18px;}
-  .about-grid p{color:var(--ink-soft); max-width:56ch;}
-  .about-grid p + p{margin-top:14px;}
-  .ledger{
-    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-    padding:24px;
-  }
-  .ledger-row{
-    display:flex; justify-content:space-between; gap:12px;
-    padding:12px 0; border-bottom:1px dashed var(--line);
-    font-size:0.88rem;
-  }
-  .ledger-row:last-child{border-bottom:none;}
-  .ledger-row .label{color:var(--ink-soft);}
-  .ledger-row .val{font-weight:600; text-align:right; color:var(--pine-deep);}
-
-  /* ---------- QUALIFICATIONS (Rx stubs) ---------- */
-  .stub-list{display:flex; flex-direction:column; gap:0;}
-  .stub{
-    position:relative; background:var(--card); border:1px solid var(--line);
-    border-radius:14px; padding:22px 26px; margin-bottom:22px;
-    display:grid; grid-template-columns:110px 1fr; gap:20px; align-items:start;
-  }
-  .stub::before, .stub::after{
-    content:""; position:absolute; top:50%; width:22px; height:22px; border-radius:50%;
-    background:var(--paper); border:1px solid var(--line); transform:translateY(-50%);
-  }
-  .stub::before{left:-11px;}
-  .stub::after{right:-11px;}
-  .stub .rx-no{
-    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--maroon);
-    border-right:1px dashed var(--line); padding-right:16px;
-  }
-  .stub .rx-no .bs{display:block; font-size:1.3rem; font-weight:600; color:var(--pine-deep); margin-top:4px;}
-  .stub h3{font-size:1.14rem; font-weight:600; margin-bottom:4px;}
-  .stub .inst{color:var(--ink-soft); font-size:0.92rem;}
-  .stub .loc{color:var(--ink-soft); font-size:0.82rem; margin-top:6px; font-family:'IBM Plex Mono', monospace;}
-  @media (max-width:600px){
-    .stub{grid-template-columns:1fr;}
-    .stub .rx-no{border-right:none; border-bottom:1px dashed var(--line); padding-right:0; padding-bottom:10px; display:flex; align-items:baseline; gap:8px;}
+  /* -------- About -------- */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  .about-grid p{font-size:15.5px;color:var(--ink-soft);margin:0 0 14px;}
+  .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+  .pill{
+    font-family:var(--font-mono);
+    font-size:12.5px;
+    padding:7px 13px;
+    border:1px solid var(--teal-600);
+    border-radius:100px;
+    color:var(--teal-800);
+    background:var(--teal-100);
   }
 
-  /* ---------- BUSINESSES (blister cards) ---------- */
-  .biz-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px;}
-  @media (max-width:760px){.biz-grid{grid-template-columns:1fr;}}
-  .biz-card{
-    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
-    padding:26px; position:relative; overflow:hidden; transition:transform .25s ease, box-shadow .25s ease;
+  /* -------- Timeline (real chronology, so numbering is justified) -------- */
+  .timeline{position:relative;padding-left:28px;border-left:2px solid var(--line);}
+  .tl-item{position:relative;padding-bottom:30px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:attr(data-year);
+    position:absolute;left:-92px;top:2px;
+    width:70px;text-align:right;
+    font-family:var(--font-mono);font-size:12px;color:var(--amber-500);
   }
-  .biz-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
-  .blister-row{display:flex; gap:8px; position:absolute; top:0; left:26px;}
-  .blister-row span{
-    width:14px; height:14px; border-radius:50%; background:var(--paper);
-    border:1px solid var(--line); border-top:none; margin-top:-7px;
+  .tl-dot{
+    position:absolute;left:-34px;top:5px;
+    width:11px;height:11px;border-radius:50%;
+    background:var(--card);border:2px solid var(--teal-600);
   }
-  .biz-head{display:flex; align-items:center; gap:14px; margin-top:10px;}
-  .logo-badge{
-    width:56px; height:56px; border-radius:12px; flex-shrink:0;
-    background:var(--pine); color:var(--paper); display:flex; align-items:center; justify-content:center;
-    font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:0.78rem; overflow:hidden;
+  .tl-item h3{
+    font-family:var(--font-body);font-weight:600;font-size:16px;
+    margin:0 0 4px;color:var(--teal-950);
   }
-  .logo-badge img{width:100%; height:100%; object-fit:cover;}
-  .biz-card h3{font-size:1.16rem;}
-  .biz-card .tag{
-    font-family:'IBM Plex Mono', monospace; font-size:0.68rem; text-transform:uppercase;
-    letter-spacing:0.08em; color:var(--saffron-deep); margin-top:2px;
-  }
-  .biz-card p{color:var(--ink-soft); font-size:0.9rem; margin-top:12px;}
-  .biz-card .biz-loc{
-    font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--ink-soft); margin-top:10px;
-  }
-  .biz-card .biz-link{
-    display:inline-flex; align-items:center; gap:6px; margin-top:14px;
-    font-size:0.85rem; font-weight:600; color:var(--pine-deep); border-bottom:1px solid var(--pine-deep);
+  .tl-item p{margin:0;color:var(--ink-soft);font-size:14.5px;}
+  @media (max-width:640px){
+    .tl-item::before{position:static;display:block;margin-bottom:4px;text-align:left;}
+    .timeline{padding-left:22px;}
+    .tl-dot{left:-28px;}
   }
 
-  /* ---------- EXPERTISE ---------- */
-  .exp-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
-  @media (max-width:760px){.exp-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (max-width:480px){.exp-grid{grid-template-columns:1fr;}}
-  .exp-card{
-    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:24px;
-    transition:.25s;
+  /* -------- Ventures -------- */
+  .venture-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .venture-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    overflow:hidden;
+    display:flex;flex-direction:column;
+    transition:border-color .2s ease, transform .2s ease;
   }
-  .exp-card:hover{border-color:var(--pine); transform:translateY(-3px);}
-  .exp-card .icon{
-    width:42px; height:42px; border-radius:10px; background:var(--paper-alt);
-    display:flex; align-items:center; justify-content:center; margin-bottom:14px; color:var(--maroon);
+  .venture-card:hover{border-color:var(--teal-600);transform:translateY(-2px);}
+  .venture-band{height:6px;background:var(--amber-300);}
+  .venture-card:nth-child(even) .venture-band{background:var(--teal-600);}
+  .venture-body{padding:22px 24px 24px;flex:1;display:flex;flex-direction:column;gap:12px;}
+  .venture-logo-row{display:flex;align-items:center;gap:12px;}
+  .venture-logo{
+    width:44px;height:44px;border-radius:6px;
+    background:var(--teal-100);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;flex-shrink:0;
   }
-  .exp-card h3{font-size:1.02rem; font-weight:600; color:var(--pine-deep);}
-  .exp-card p{font-size:0.84rem; color:var(--ink-soft); margin-top:8px;}
+  .venture-logo img{width:100%;height:100%;object-fit:contain;}
+  .venture-logo span{font-family:var(--font-mono);font-size:13px;color:var(--teal-800);font-weight:500;}
+  .venture-body h3{font-family:var(--font-display);font-size:18.5px;font-weight:600;margin:0;color:var(--teal-950);}
+  .venture-loc{font-family:var(--font-mono);font-size:12px;color:var(--ink-soft);margin:0;}
+  .venture-body p.desc{font-size:14.5px;color:var(--ink-soft);margin:0;}
+  .venture-link{
+    margin-top:auto;font-size:13.5px;font-weight:500;color:var(--teal-800);
+    text-decoration:none;display:inline-flex;align-items:center;gap:6px;
+  }
+  .venture-link:hover{color:var(--amber-500);}
 
-  /* ---------- CONTACT ---------- */
-  .contact-card{
-    background:var(--pine); color:var(--paper); border-radius:24px; padding:52px;
-    display:grid; grid-template-columns:1fr 1fr; gap:40px;
+  /* -------- Contact / footer -------- */
+  footer{
+    background:var(--teal-950);color:#EAF2F1;
+    padding:56px 0 34px;margin-top:20px;
   }
-  @media (max-width:760px){.contact-card{grid-template-columns:1fr; padding:34px 24px;}}
-  .contact-card h2{color:var(--paper); font-size:1.9rem;}
-  .contact-card p{color:#C9D8D3; margin-top:12px; max-width:42ch;}
-  .contact-methods{display:flex; flex-direction:column; gap:12px; margin-top:24px;}
-  .contact-methods a{
-    display:flex; align-items:center; gap:12px; padding:12px 16px;
-    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); border-radius:12px;
-    font-size:0.9rem; transition:.2s;
+  .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;}
+  footer h2.title{color:#fff;}
+  footer .kicker{color:var(--amber-300);}
+  .contact-list{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:14px;}
+  .contact-list li{display:flex;align-items:center;gap:12px;font-size:14.5px;}
+  .contact-list .ico{
+    font-family:var(--font-mono);font-size:12px;
+    width:32px;height:32px;border-radius:50%;
+    border:1px solid rgba(255,255,255,0.25);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    color:var(--amber-300);
   }
-  .contact-methods a:hover{background:rgba(255,255,255,0.14);}
-  .contact-note{
-    margin-top:18px; font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:#9FB6AF;
+  .contact-list a{text-decoration:none;color:#EAF2F1;}
+  .contact-list a:hover{color:var(--amber-300);}
+  .social-row{display:flex;gap:10px;margin-top:22px;}
+  .social-row a{
+    font-family:var(--font-mono);font-size:12px;
+    padding:9px 14px;border:1px solid rgba(255,255,255,0.25);
+    border-radius:100px;text-decoration:none;color:#EAF2F1;
   }
-  .vcard-btn{
-    margin-top:24px; display:inline-flex; align-items:center; gap:8px;
-    background:var(--saffron); color:var(--pine-deep); font-weight:700; font-size:0.88rem;
-    padding:13px 20px; border-radius:999px; border:none; cursor:pointer; transition:.2s;
+  .social-row a:hover{border-color:var(--amber-300);color:var(--amber-300);}
+  .footer-note{
+    margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.12);
+    font-size:12.5px;color:#8FADAA;font-family:var(--font-mono);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
   }
-  .vcard-btn:hover{background:#fff;}
 
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--pine-deep); color:#9FB6AF; padding:36px 0; font-size:0.82rem;}
-  footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
-  footer .mono{color:#7C9791;}
-  #toTop{
-    position:fixed; bottom:24px; right:24px; width:44px; height:44px; border-radius:50%;
-    background:var(--pine); color:var(--paper); border:none; cursor:pointer; display:none;
-    align-items:center; justify-content:center; box-shadow:var(--shadow); z-index:90;
+  /* -------- Reveal on scroll -------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
   }
-  #toTop.show{display:flex;}
 
-  .section-head{max-width:60ch; margin-bottom:44px;}
-  .section-head h2{font-size:2rem;}
-  .section-head .sub{color:var(--ink-soft); margin-top:8px;}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--amber-500);outline-offset:2px;
+  }
+
+  @media (max-width:820px){
+    .pad{grid-template-columns:1fr;}
+    .pad-left::after{display:none;}
+    .pad-right{padding:30px;}
+    .about-grid{grid-template-columns:1fr;gap:26px;}
+    .venture-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;gap:30px;}
+    nav.toplinks{display:none;}
+    .menu-toggle{display:block;}
+  }
 </style>
 </head>
 <body>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#home" class="brand"><span class="badge">BB</span> Bijaya Bhandari</a>
-    <nav class="links" id="navLinks">
-      <a href="#home">Home</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="rx">℞</span> Bijaya Bhandari</div>
+    <nav class="toplinks">
       <a href="#about">About</a>
       <a href="#qualifications">Qualifications</a>
-      <a href="#businesses">Businesses</a>
-      <a href="#expertise">Expertise</a>
+      <a href="#ventures">Ventures</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="nav-cta">Get in touch</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <a class="call-btn" href="tel:+9779848249044">Call +977-984-8249044</a>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow mono">Rx No. 2026 — 001</div>
-      <h1>Bijaya Bhandari</h1>
-      <p class="role"><strong>Registered Pharmacist</strong> &amp; Digital Health Entrepreneur, building pharmacy, oncology-care distribution and AI-driven ventures out of Kathmandu, Nepal.</p>
-      <div class="addr">📍 Harisiddhi–28, Lalitpur, Nepal</div>
-      <div class="contact-row">
-        <a class="pill-btn filled" href="#contact">Call / WhatsApp</a>
-        <a class="pill-btn" href="https://www.dajubhaipharmacy.com" target="_blank" rel="noopener">Visit Daju Bhai Pharmacy</a>
+<section class="hero">
+  <div class="wrap">
+    <div class="pad reveal">
+      <div class="pad-left">
+        <p class="eyebrow"><span class="rx-mark">℞</span> Community pharmacist &amp; healthcare entrepreneur</p>
+        <h1 class="name">Bijaya Bhandari</h1>
+        <p class="role">Dispensing care at Dajubhai Pharmacy, importing oncology nutraceuticals through Pharmamandu.com, and building healthcare access across Lalitpur, Dhangadhi and Kathmandu &mdash; alongside mentoring in AI and share market analysis.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="tel:+9779848249044">Call +977-984-8249044</a>
+          <a class="btn btn-outline" href="https://www.dajubhaipharmacy.com" target="_blank" rel="noopener">Visit Dajubhai Pharmacy</a>
+        </div>
       </div>
-      <div class="social-row">
-        <a href="https://www.facebook.com/share/18s2YhHqrK/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z"/></svg>
-        </a>
-        <a href="https://www.facebook.com/share/18s2YhHqrK/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@phr_____bj?_r=1&_t=ZS-980CXOMTwxg" target="_blank" rel="noopener" aria-label="TikTok">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v10.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 3c0 2.6 2 4.6 4.5 4.8"/></svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="rx-frame">
-      <div class="rx-top">
-        <span>Pharmamandu · Profile</span>
-        <span>Kathmandu, NP</span>
-      </div>
-      <div class="photo-holder">
-        <img id="profileImg" alt="Bijaya Bhandari" style="display:none;">
-        <div class="monogram-fallback" id="profileFallback">BB</div>
-      </div>
-      <div class="rx-bottom">
-        <span>Pharmacist · Founder</span>
-        <span>Est. Practice</span>
+      <div class="pad-right">
+        <div class="capsule-frame">
+          <img src="profile image.jpg" alt="Bijaya Bhandari" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="avatar-fallback" style="display:none;">BB</div>
+        </div>
+        <span class="label-tape">Harisiddhi-28, Lalitpur</span>
       </div>
     </div>
   </div>
-
-  <svg class="pulse-divider" id="pulseDivider" viewBox="0 0 1200 44" preserveAspectRatio="none">
-    <path d="M0,22 L260,22 L290,6 L320,38 L350,22 L420,22 L450,10 L480,34 L510,22 L1200,22"/>
-  </svg>
 </section>
 
-<!-- ================= ABOUT ================= -->
 <section id="about">
-  <div class="wrap about-grid">
-    <div class="reveal">
-      <div class="eyebrow">About</div>
-      <h2>A pharmacist's eye, an entrepreneur's build.</h2>
-      <p>Bijaya Bhandari is a registered pharmacist based in Harisiddhi, Lalitpur, working at the intersection of clinical pharmacy, digital health delivery, and applied AI. His career began at the dispensing counter and has grown into a network of ventures spanning retail pharmacy, oncology nutraceutical import, full-phase clinical care, and allopathic distribution.</p>
-      <p>Alongside pharmacy, he has trained as a NEPSE technical analyst and completed dedicated AI training — a combination he brings back into his businesses as data-informed decision-making, digital-first patient access, and AI-assisted operations.</p>
-    </div>
-    <div class="ledger reveal">
-      <div class="ledger-row"><span class="label">Base</span><span class="val">Harisiddhi–28, Lalitpur</span></div>
-      <div class="ledger-row"><span class="label">Core practice</span><span class="val">Oncology Care &amp; Dispensing</span></div>
-      <div class="ledger-row"><span class="label">Ventures</span><span class="val">4 active businesses</span></div>
-      <div class="ledger-row"><span class="label">Secondary skill</span><span class="val">NEPSE Technical Analysis</span></div>
-      <div class="ledger-row"><span class="label">Emerging focus</span><span class="val">Applied AI, since 2082 B.S.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= QUALIFICATIONS ================= -->
-<section id="qualifications" style="background:var(--paper-alt);">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="eyebrow">Qualifications</div>
-      <h2>Training history</h2>
-      <p class="sub">A chronological record, from secondary school through pharmacy diploma to specialised analyst and AI training.</p>
+      <p class="kicker">About</p>
+      <h2 class="title">From the dispensing counter to the boardroom</h2>
     </div>
-    <div class="stub-list">
-      <div class="stub reveal">
-        <div class="rx-no">SLC<span class="bs">2067 B.S.</span></div>
-        <div>
-          <h3>School Leaving Certificate</h3>
-          <div class="inst">Shree Prabhat Vidya Niketan</div>
-          <div class="loc">Bhimdatta, Kanchanpur</div>
-        </div>
-      </div>
-      <div class="stub reveal">
-        <div class="rx-no">Diploma<span class="bs">2071 B.S.</span></div>
-        <div>
-          <h3>Diploma in Pharmacy</h3>
-          <div class="inst">Farwest School of Medicine</div>
-          <div class="loc">Bhimdatta, Kanchanpur</div>
-        </div>
-      </div>
-      <div class="stub reveal">
-        <div class="rx-no">Analyst<span class="bs">2081 B.S.</span></div>
-        <div>
-          <h3>NEPSE Technical Analyst Training</h3>
-          <div class="inst">sik.com</div>
-          <div class="loc">Nepal Stock Exchange Focus</div>
-        </div>
-      </div>
-      <div class="stub reveal">
-        <div class="rx-no">AI<span class="bs">2082 B.S.</span></div>
-        <div>
-          <h3>AI Training</h3>
-          <div class="inst">Digital Solution Pokhara</div>
-          <div class="loc">Pokhara, Nepal</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BUSINESSES ================= -->
-<section id="businesses">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Ventures</div>
-      <h2>Businesses</h2>
-      <p class="sub">Four ventures spanning dispensing, oncology import, full-phase clinical care, and allopathic distribution.</p>
-    </div>
-    <div class="biz-grid">
-
-      <div class="biz-card reveal">
-        <div class="blister-row"><span></span><span></span><span></span><span></span></div>
-        <div class="biz-head">
-          <div class="logo-badge">
-            <img id="logoDajubhai" alt="Daju Bhai Pharmacy logo" style="display:none;">
-            <span id="logoDajubhaiFallback">DB</span>
-          </div>
-          <div>
-            <h3>Daju Bhai Pharmacy</h3>
-            <div class="tag">Retail &amp; Online Pharmacy</div>
-          </div>
-        </div>
-        <p>Specialised in oncology care, with nationwide online delivery through dajubhaipharmacy.com.</p>
-        <div class="biz-loc">Harisiddhi–28, Lalitpur</div>
-        <a class="biz-link" href="https://www.dajubhaipharmacy.com" target="_blank" rel="noopener">dajubhaipharmacy.com →</a>
-      </div>
-
-      <div class="biz-card reveal">
-        <div class="blister-row"><span></span><span></span><span></span><span></span></div>
-        <div class="biz-head">
-          <div class="logo-badge">
-            <img id="logoPharmamandu" alt="Pharmamandu Dot Com logo" style="display:none;">
-            <span id="logoPharmamanduFallback">PM</span>
-          </div>
-          <div>
-            <h3>Pharmamandu Dot Com Pvt. Ltd.</h3>
-            <div class="tag">Nutraceutical Import</div>
-          </div>
-        </div>
-        <p>Imports oncology-related nutraceuticals; the registered parent company for digital pharmacy operations.</p>
-        <div class="biz-loc">Harisiddhi–28, Lalitpur</div>
-      </div>
-
-      <div class="biz-card reveal">
-        <div class="blister-row"><span></span><span></span><span></span><span></span></div>
-        <div class="biz-head">
-          <div class="logo-badge">
-            <img id="logoCivil" alt="Civil Medicare Centre logo" style="display:none;">
-            <span id="logoCivilFallback">CMC</span>
-          </div>
-          <div>
-            <h3>Civil Medicare Centre</h3>
-            <div class="tag">Full-Phase Clinic</div>
-          </div>
-        </div>
-        <p>A full-phase clinical care centre offering comprehensive patient services.</p>
-        <div class="biz-loc">Dhangadhi, Nepal</div>
-      </div>
-
-      <div class="biz-card reveal">
-        <div class="blister-row"><span></span><span></span><span></span><span></span></div>
-        <div class="biz-head">
-          <div class="logo-badge"><span>UM</span></div>
-          <div>
-            <h3>Unigrow Medisales Pvt. Ltd.</h3>
-            <div class="tag">Allopathic Distribution</div>
-          </div>
-        </div>
-        <p>Importer and distributor of allopathic medicine, and home of the Unigrow health &amp; wellness brand.</p>
-        <div class="biz-loc">Koteshwor–32, Fulbari Marga</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= EXPERTISE ================= -->
-<section id="expertise" style="background:var(--paper-alt);">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Expertise</div>
-      <h2>Where he adds value</h2>
-    </div>
-    <div class="exp-grid">
-      <div class="exp-card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
-        <h3>Medicine Dispensing</h3>
-        <p>Accurate, safety-checked dispensing across retail and oncology prescriptions.</p>
-      </div>
-      <div class="exp-card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 4.5-4 8-8 11z"/></svg></div>
-        <h3>Patient Counselling</h3>
-        <p>Clear, empathetic guidance on medication use, adherence and care.</p>
-      </div>
-      <div class="exp-card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l5-6 4 4 8-9M20 6h-4v4"/></svg></div>
-        <h3>Share Market Analysis</h3>
-        <p>NEPSE-trained technical analysis of market trends and price action.</p>
-      </div>
-      <div class="exp-card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
-        <h3>AI Mentor</h3>
-        <p>Guiding practical, applied AI adoption inside pharmacy and small business operations.</p>
-      </div>
-      <div class="exp-card reveal">
-        <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-7-7 18-2-8-9-3z"/></svg></div>
-        <h3>Pharmaceutical Marketing</h3>
-        <p>Positioning and growth strategy for pharmacy and nutraceutical brands.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact">
-  <div class="wrap">
-    <div class="contact-card reveal">
+    <div class="about-grid reveal">
       <div>
-        <div class="eyebrow" style="color:var(--saffron);">Contact</div>
-        <h2>Let's talk pharmacy, ventures, or AI.</h2>
-        <p>Reachable by call, WhatsApp, Viber and WeChat on the same number. Fastest response is usually via WhatsApp.</p>
-        <button class="vcard-btn" id="vcardBtn">⬇ Save Contact (vCard)</button>
-        <div class="contact-note">Phone number placeholder — update PHONE_NUMBER in the code with the real number.</div>
+        <p>Bijaya Bhandari trained as a pharmacist at Farwest School of Medicine, Bhimdatta, Kanchanpur, completing a Diploma in Pharmacy in 2071 B.S. That grounding in dispensing and patient care now sits alongside a growing group of healthcare and distribution ventures across Nepal, with a particular focus on oncology care and medicine access.</p>
+        <p>Beyond the pharmacy counter, Bijaya has trained as a NEPSE technical analyst and completed AI training in 2082 B.S., and now mentors others in applying AI tools &mdash; bringing a cross-disciplinary approach to healthcare, markets and technology.</p>
       </div>
-      <div class="contact-methods">
-        <a href="tel:+977XXXXXXXXXX">📞 Call — +977-XX-XXXXXXX</a>
-        <a href="https://wa.me/977XXXXXXXXXX" target="_blank" rel="noopener">💬 WhatsApp</a>
-        <a href="viber://chat?number=%2B977XXXXXXXXXX">📲 Viber</a>
-        <a href="weixin://">🟢 WeChat</a>
-        <a href="https://www.facebook.com/share/18s2YhHqrK/" target="_blank" rel="noopener">📘 Facebook</a>
-        <a href="https://www.tiktok.com/@phr_____bj?_r=1&_t=ZS-980CXOMTwxg" target="_blank" rel="noopener">🎵 TikTok</a>
+      <div>
+        <p class="lede" style="margin-top:0;">Areas of expertise</p>
+        <div class="pill-row">
+          <span class="pill">Medicine dispensing</span>
+          <span class="pill">Patient counselling</span>
+          <span class="pill">Share market analysis</span>
+          <span class="pill">AI mentoring</span>
+          <span class="pill">Pharmaceutical marketing</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer>
+<section id="qualifications">
   <div class="wrap">
-    <span>© <span id="year"></span> Bijaya Bhandari — Harisiddhi–28, Lalitpur, Nepal</span>
-    <span class="mono">Registered Pharmacist · Digital Health Entrepreneur</span>
+    <div class="section-head reveal">
+      <p class="kicker">Qualifications</p>
+      <h2 class="title">Education &amp; training</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-item" data-year="2067 B.S.">
+        <span class="tl-dot"></span>
+        <h3>SLC</h3>
+        <p>Shree Prabhat Vidya Niketan, Bhimdatta, Kanchanpur</p>
+      </div>
+      <div class="tl-item" data-year="2071 B.S.">
+        <span class="tl-dot"></span>
+        <h3>Diploma in Pharmacy</h3>
+        <p>Farwest School of Medicine, Bhimdatta, Kanchanpur</p>
+      </div>
+      <div class="tl-item" data-year="2081 B.S.">
+        <span class="tl-dot"></span>
+        <h3>NEPSE Technical Analyst Training</h3>
+        <p>sik.com</p>
+      </div>
+      <div class="tl-item" data-year="2082 B.S.">
+        <span class="tl-dot"></span>
+        <h3>AI Training</h3>
+        <p>Digital Solution, Pokhara</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ventures">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="kicker">Ventures</p>
+      <h2 class="title">Businesses &amp; clinics</h2>
+      <p class="lede">Four ventures spanning retail pharmacy, oncology nutraceutical imports, a full-phase clinic and allopathic medicine distribution.</p>
+    </div>
+    <div class="venture-grid reveal">
+
+      <div class="venture-card">
+        <div class="venture-band"></div>
+        <div class="venture-body">
+          <div class="venture-logo-row">
+            <div class="venture-logo">
+              <img src="DAJUBHAI_B64.JPEG" alt="Dajubhai Pharmacy logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+              <span style="display:none;">DP</span>
+            </div>
+            <div>
+              <h3>Dajubhai Pharmacy</h3>
+              <p class="venture-loc">Harisiddhi-28, Lalitpur</p>
+            </div>
+          </div>
+          <p class="desc">Retail pharmacy specialising in oncology care, with online ordering and delivery.</p>
+          <a class="venture-link" href="https://www.dajubhaipharmacy.com" target="_blank" rel="noopener">dajubhaipharmacy.com &rarr;</a>
+        </div>
+      </div>
+
+      <div class="venture-card">
+        <div class="venture-band"></div>
+        <div class="venture-body">
+          <div class="venture-logo-row">
+            <div class="venture-logo">
+              <img src="PHARMAMANDU_B64.JPEG" alt="Pharmamandu.com logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+              <span style="display:none;">PM</span>
+            </div>
+            <div>
+              <h3>Pharmamandu.com Pvt. Ltd.</h3>
+              <p class="venture-loc">Harisiddhi-28, Lalitpur</p>
+            </div>
+          </div>
+          <p class="desc">Importer of oncology-related nutraceuticals, supplying the group's pharmacy and clinic network.</p>
+        </div>
+      </div>
+
+      <div class="venture-card">
+        <div class="venture-band"></div>
+        <div class="venture-body">
+          <div class="venture-logo-row">
+            <div class="venture-logo">
+              <img src="CIVIL_B64.JPEG" alt="Civil Medicare Centre logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+              <span style="display:none;">CM</span>
+            </div>
+            <div>
+              <h3>Civil Medicare Centre</h3>
+              <p class="venture-loc">Dhangadhi</p>
+            </div>
+          </div>
+          <p class="desc">A full-phase clinic providing broader outpatient and diagnostic care.</p>
+        </div>
+      </div>
+
+      <div class="venture-card">
+        <div class="venture-band"></div>
+        <div class="venture-body">
+          <div class="venture-logo-row">
+            <div class="venture-logo"><span>UM</span></div>
+            <div>
+              <h3>Unigrow Medisales Pvt. Ltd.</h3>
+              <p class="venture-loc">Koteshwor-32, Fulbari Marga</p>
+            </div>
+          </div>
+          <p class="desc">Importer and distributor of allopathic medicine.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-grid reveal">
+      <div>
+        <p class="kicker">Contact</p>
+        <h2 class="title">Get in touch</h2>
+        <ul class="contact-list">
+          <li><span class="ico">℞</span> Harisiddhi-28, Lalitpur</li>
+          <li><span class="ico">&#9742;</span> <a href="tel:+9779848249044">+977-984-8249044</a> &mdash; call, WhatsApp, Viber, WeChat</li>
+        </ul>
+      </div>
+      <div>
+        <p class="kicker">Follow</p>
+        <h2 class="title">Social</h2>
+        <div class="social-row">
+          <a href="https://www.facebook.com/share/18s2YhHqrK/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@phr_____bj?_r=1&_t=ZS-980CXOMTwxg" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>&copy; <span id="year"></span> Bijaya Bhandari</span>
+      <span>Dajubhai Pharmacy &middot; Pharmamandu.com &middot; Civil Medicare Centre &middot; Unigrow Medisales</span>
+    </div>
   </div>
 </footer>
 
-<button id="toTop" aria-label="Back to top">↑</button>
-
 <script>
-(function(){
-  "use strict";
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  /* ============ 1. IMAGE SLOTS ============
-     Paste base64 strings (no need to include the "data:image/jpg;base64," prefix,
-     it is added automatically) to swap in the real photo/logos.
-     - profile.jpg      -> profile_B64.jpg
-     - dajubhai logo     -> DAJUBHAI_B64.JPG
-     - pharmamandu logo  -> PHARMAMANDU_B64.JPG
-     - civil logo        -> CIVIL_B64.JPG
-  =========================================== */
-  const IMAGES = {
-    profile: "",      // <-- paste profile_B64.jpg.jpg base64 here
-    dajubhai: "",      // <-- paste DAJUBHAI_B64.jpg base64 here
-    pharmamandu: "",   // <-- paste PHARMAMANDU_B64.jpg base64 here
-    civil: ""          // <-- paste CIVIL_B64.jpg base64 here
-  };
-
-  function applyImage(base64, imgId, fallbackId){
-    if(!base64) return;
-    const img = document.getElementById(imgId);
-    const fb = document.getElementById(fallbackId);
-    if(!img) return;
-    img.src = base64.startsWith("data:") ? base64 : "data:image/jpg;base64," + base64;
-    img.style.display = "block";
-    if(fb) fb.style.display = "none";
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
   }
-  applyImage(IMAGES.profile, "profileImg", "profileFallback");
-  applyImage(IMAGES.dajubhai, "logoDajubhai", "logoDajubhaiFallback");
-  applyImage(IMAGES.pharmamandu, "logoPharmamandu", "logoPharmamanduFallback");
-  applyImage(IMAGES.civil, "logoCivil", "logoCivilFallback");
-
-  /* ============ 2. MOBILE MENU ============ */
-  const menuBtn = document.getElementById("menuBtn");
-  const navLinks = document.getElementById("navLinks");
-  menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-  navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
-
-  /* ============ 3. SCROLL REVEAL ============ */
-  const revealEls = document.querySelectorAll(".reveal, .pulse-divider");
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add("in-view");
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => io.observe(el));
-
-  /* ============ 4. ACTIVE NAV LINK ON SCROLL ============ */
-  const sections = document.querySelectorAll("section[id]");
-  const navAnchors = document.querySelectorAll("nav.links a");
-  const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        navAnchors.forEach(a => a.classList.remove("active"));
-        const match = document.querySelector(`nav.links a[href="#${entry.target.id}"]`);
-        if(match) match.classList.add("active");
-      }
-    });
-  }, { threshold: 0.5 });
-  sections.forEach(s => navObserver.observe(s));
-
-  /* ============ 5. BACK TO TOP ============ */
-  const toTop = document.getElementById("toTop");
-  window.addEventListener("scroll", () => {
-    toTop.classList.toggle("show", window.scrollY > 500);
-  });
-  toTop.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
-
-  /* ============ 6. FOOTER YEAR ============ */
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  /* ============ 7. VCARD DOWNLOAD ============ */
-  const PHONE_NUMBER = "+977XXXXXXXXXX"; // <-- replace with real number
-  document.getElementById("vcardBtn").addEventListener("click", () => {
-    const vcard = [
-      "BEGIN:VCARD",
-      "VERSION:3.0",
-      "N:Bhandari;Bijaya;;;",
-      "FN:Bijaya Bhandari",
-      "ORG:Daju Bhai Pharmacy",
-      "TITLE:Registered Pharmacist",
-      "TEL;TYPE=CELL:" + PHONE_NUMBER,
-      "ADR;TYPE=WORK:;;Harisiddhi-28;Lalitpur;;;Nepal",
-      "URL:https://www.dajubhaipharmacy.com",
-      "END:VCARD"
-    ].join("\n");
-    const blob = new Blob([vcard], { type: "text/vcard" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Bijaya_Bhandari.vcf";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  });
-
-})();
 </script>
+
 </body>
 </html>
